@@ -1,0 +1,25 @@
+{
+  "validation_unseen_city_share": 0.12058333333333333,
+  "runs": [
+    {
+      "seed": 0,
+      "unseen_city_MAPE": 1.993746244233638,
+      "seen_MAPE": 1.3827459555193446,
+      "n_unseen": 1718
+    },
+    {
+      "seed": 1,
+      "unseen_city_MAPE": 1.7314072202077984,
+      "seen_MAPE": 1.3971914457440875,
+      "n_unseen": 2246
+    },
+    {
+      "seed": 2,
+      "unseen_city_MAPE": 1.6530443913869326,
+      "seen_MAPE": 1.378924303487911,
+      "n_unseen": 2124
+    }
+  ],
+  "mean_unseen_city_MAPE": 1.792732618609456,
+  "mean_seen_MAPE": 1.3862872349171145
+}

@@ -1,0 +1,42 @@
+{
+  "train_rows_clean": 47323,
+  "label_outliers_removed": 677,
+  "monthly_trend_pct": 0.597959150022058,
+  "quarter_end_uplift_pct": 4.069946752878946,
+  "market_index_log_effect": 0.1419531920545761,
+  "feature_importance": {
+    "delivery_lat": 0.2078,
+    "pickup_lat": 0.1982,
+    "delivery_lon": 0.0961,
+    "pickup_lon": 0.0867,
+    "pickup_te": 0.0572,
+    "quote_signal": 0.0489,
+    "delivery_te": 0.0475,
+    "weight": 0.0452,
+    "lane_te": 0.0369,
+    "straight_miles": 0.0311,
+    "bearing_lat": 0.0287,
+    "bearing_lon": 0.0255,
+    "distance": 0.0219,
+    "quarter_end_ramp": 0.0207,
+    "equipment": 0.0197,
+    "market_index": 0.0099,
+    "lane_eq_te": 0.0076,
+    "log_distance": 0.0056,
+    "day_of_week": 0.0028,
+    "circuity": 0.001,
+    "weight_capped": 0.0007,
+    "is_weekend": 0.0002,
+    "weight_missing": 0.0001
+  },
+  "validation_prediction_stats": {
+    "count": 12000.0,
+    "mean": 2392.09,
+    "std": 1384.95,
+    "min": 196.39,
+    "25%": 1285.08,
+    "50%": 2067.54,
+    "75%": 3394.28,
+    "max": 6984.72
+  }
+}
