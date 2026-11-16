@@ -35,13 +35,14 @@ def save(fig, name):
 
 def model_comparison():
     res = pd.read_csv(ROOT / "outputs" / "validation_metrics.csv")
-    s = res[res["labels"] == "clean"].groupby("model")["MAPE_%"].mean().sort_values(ascending=False)
+    primary = res["fold"].str.contains("test 2025-09-01")
+    s = res[(res["labels"] == "clean") & primary].set_index("model")["MAPE_%"].sort_values(ascending=False)
     fig, ax = plt.subplots(figsize=(7.5, 3.4))
     colors = [BLUE if "final" in m else GRAY for m in s.index]
     ax.barh(s.index, s.values, color=colors, height=0.6)
     for y, v in enumerate(s.values):
         ax.text(v + 0.05, y, f"{v:.2f}%", va="center", color=INK, fontsize=9)
-    ax.set_xlabel("Mean absolute % error, averaged over 3 rolling time folds")
+    ax.set_xlabel("Mean absolute % error on Sep–Oct holdout (trained on Jan–Aug)")
     ax.grid(axis="y", visible=False)
     ax.set_title("Validation error by model (lower is better)")
     save(fig, "model_comparison.png")
